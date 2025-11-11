@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Auglaize County Department of Job and Family Services provides public assistance, child support, child protective services, foster care, adoption, and workforce development services to Auglaize County residents.">
   <title>Auglaize County Department of Job & Family Services</title>
 
   <!-- Favicon -->
@@ -24,7 +25,7 @@
 
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="YOUR_NONCE"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
 
   <!-- Header -->
   <header class="site-header">
@@ -70,10 +71,10 @@
               The Auglaize County Department of Job and Family Services provides assistance with public benefits, child support, child protective services, foster care, adoption, and workforce development.
             </p>
             <div class="hero-actions">
-              <a class="usa-button usa-button--big" href="#apply">Apply for Benefits</a>
+              <a class="usa-button usa-button--big" href="https://benefits.ohio.gov" target="_blank" rel="noopener noreferrer">Apply for Benefits<span class="sr-only"> (opens in new tab)</span></a>
               <a class="usa-button usa-button--outline usa-button--inverse usa-button--big" href="tel:567-242-2700">
                 <i class="fas fa-phone" aria-hidden="true"></i>
-                Call 567-242-2700
+                <span>Call 567-242-2700</span>
               </a>
             </div>
           </div>
@@ -82,27 +83,27 @@
           <div class="chat-widget" id="chatWidget">
             <div class="chat-widget__header">
               <div class="chat-widget__header-content">
-                <i class="fas fa-comments chat-widget__header-icon"></i>
+                <i class="fas fa-comments chat-widget__header-icon" aria-hidden="true"></i>
                 <div class="chat-widget__header-text">
-                  <h2 class="chat-widget__title">Ask Us Anything</h2>
+                  <div class="chat-widget__title" role="heading" aria-level="3">Ask Us Anything</div>
                   <p class="chat-widget__subtitle">Get instant help</p>
                 </div>
               </div>
               <div class="chat-widget__header-actions">
                 <div class="chat-widget__status">
-                  <span class="chat-widget__status-dot"></span>
+                  <span class="chat-widget__status-dot" aria-hidden="true"></span>
                   <span class="chat-widget__status-text">Online</span>
                 </div>
                 <button class="chat-widget__close-button" id="closeChatButton" aria-label="Close chat">
-                  <i class="fas fa-times"></i>
+                  <i class="fas fa-times" aria-hidden="true"></i>
                 </button>
               </div>
             </div>
 
-            <div class="chat-widget__messages">
+            <div class="chat-widget__messages" role="log" aria-live="polite" aria-atomic="false">
               <div class="chat-message chat-message--bot">
-                <div class="chat-message__avatar">
-                  <i class="fas fa-user-tie"></i>
+                <div class="chat-message__avatar" aria-hidden="true">
+                  <i class="fas fa-user-tie" aria-hidden="true"></i>
                 </div>
                 <div class="chat-message__content">
                   <div class="chat-message__bubble">
@@ -122,8 +123,8 @@
               </div>
 
               <div class="chat-message chat-message--bot">
-                <div class="chat-message__avatar">
-                  <i class="fas fa-user-tie"></i>
+                <div class="chat-message__avatar" aria-hidden="true">
+                  <i class="fas fa-user-tie" aria-hidden="true"></i>
                 </div>
                 <div class="chat-message__content">
                   <div class="chat-message__bubble">
@@ -133,7 +134,7 @@
                 </div>
               </div>
 
-              <div class="chat-widget__typing">
+              <div class="chat-widget__typing" role="status" aria-live="polite" aria-label="Agent is typing">
                 <div class="chat-typing-indicator">
                   <span></span>
                   <span></span>
@@ -144,9 +145,9 @@
 
             <div class="chat-widget__input">
               <label for="chat-input-field" class="sr-only">Type your message</label>
-              <input type="text" id="chat-input-field" class="chat-widget__input-field" placeholder="Type your question..." aria-label="Chat message input">
+              <input type="text" id="chat-input-field" class="chat-widget__input-field" placeholder="Type your question...">
               <button class="chat-widget__send-button" aria-label="Send message">
-                <i class="fas fa-paper-plane"></i>
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
               </button>
             </div>
           </div>
@@ -154,9 +155,9 @@
       </div>
 
       <!-- Mobile Chat Bubble -->
-      <button class="chat-bubble-mobile" id="openChatButton" aria-label="Open chat">
-        <i class="fas fa-comments"></i>
-        <span class="chat-bubble-mobile__badge">1</span>
+      <button class="chat-bubble-mobile" id="openChatButton" aria-label="Open chat, 1 unread message">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+        <span class="chat-bubble-mobile__badge" aria-hidden="true">1</span>
       </button>
     </section>
 
@@ -226,7 +227,7 @@
             <h2 class="usa-alert__heading">Report Fraud</h2>
             <p class="usa-alert__text">
               The Ohio Department of Job and Family Services is committed to investigating allegations of fraud. If you suspect fraud may be occurring,
-              <a href="#fraud" class="usa-link">click here to report</a> or call <strong>567-242-2700</strong>. You may remain anonymous.
+              <a href="/report-fraud" class="usa-link">report fraud online</a> or call <strong>567-242-2700</strong>. You may remain anonymous.
             </p>
           </div>
         </div>
@@ -249,18 +250,18 @@
               <p>We encourage clients to reach Child Support caseworkers through:</p>
               <ul>
                 <li><strong>Phone:</strong> <a href="tel:567-242-2700">567-242-2700</a></li>
-                <li><strong>Web Portal:</strong> Message your caseworker directly at <a href="https://jfs.ohio.gov/ocs" target="_blank" rel="noopener noreferrer">jfs.ohio.gov/ocs</a></li>
+                <li><strong>Web Portal:</strong> Message your caseworker directly at <a href="https://jfs.ohio.gov/ocs" target="_blank" rel="noopener noreferrer">jfs.ohio.gov/ocs<span class="sr-only"> (opens in new tab)</span></a></li>
                 <li><strong>Email:</strong> <a href="mailto:AUGLAIZE_COUNTY_JFS@jfs.ohio.gov">AUGLAIZE_COUNTY_JFS@jfs.ohio.gov</a></li>
               </ul>
 
               <h4>Make a Payment</h4>
-              <p>Payments can be made through the web portal, mobile app, or at <a href="https://oh.smartchildsupport.com" target="_blank" rel="noopener noreferrer">oh.smartchildsupport.com</a>.</p>
+              <p>Payments can be made through the web portal, mobile app, or at <a href="https://oh.smartchildsupport.com" target="_blank" rel="noopener noreferrer">oh.smartchildsupport.com<span class="sr-only"> (opens in new tab)</span></a>.</p>
 
               <h4>Economic Impact Payments and Child Support</h4>
               <p>If you owe child support debt, the IRS may offset your Economic Impact Payment. Spouses who do not owe child support can file an injured spouse claim.</p>
               <ul>
-                <li><a href="https://www.irs.gov/coronavirus/economic-impact-payment-information-center" target="_blank" rel="noopener noreferrer">Treasury FAQ on Economic Impact Payments</a></li>
-                <li><a href="https://www.irs.gov/forms-pubs/about-form-8379" target="_blank" rel="noopener noreferrer">IRS Form 8379 - Injured Spouse Allocation</a></li>
+                <li><a href="https://www.irs.gov/coronavirus/economic-impact-payment-information-center" target="_blank" rel="noopener noreferrer">Treasury FAQ on Economic Impact Payments<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><a href="https://www.irs.gov/forms-pubs/about-form-8379" target="_blank" rel="noopener noreferrer">IRS Form 8379 - Injured Spouse Allocation<span class="sr-only"> (opens in new tab)</span></a></li>
               </ul>
 
               <h4>Payment Options</h4>
@@ -291,16 +292,16 @@
               <p><em>Include your name and SETS or Social Security Number on all checks.</em></p>
 
               <h5>Credit Card</h5>
-              <p>Pay online at <a href="https://oh.smartchildsupport.com" target="_blank" rel="noopener noreferrer">oh.smartchildsupport.com</a> or call <a href="tel:1-888-965-2676">1-888-965-2676</a> (Option 5)</p>
+              <p>Pay online at <a href="https://oh.smartchildsupport.com" target="_blank" rel="noopener noreferrer">oh.smartchildsupport.com<span class="sr-only"> (opens in new tab)</span></a> or call <a href="tel:1-888-965-2676">1-888-965-2676</a> (Option 5)</p>
 
               <h5>Cash via MoneyGram</h5>
-              <p>Pay at any MoneyGram retail location (Walmart, CVS, locations with "Pay a Bill Center") or online at <a href="https://moneygram.com" target="_blank" rel="noopener noreferrer">moneygram.com</a> (minimum fee $3.99)</p>
+              <p>Pay at any MoneyGram retail location (Walmart, CVS, locations with "Pay a Bill Center") or online at <a href="https://moneygram.com" target="_blank" rel="noopener noreferrer">moneygram.com<span class="sr-only"> (opens in new tab)</span></a> (minimum fee $3.99)</p>
 
               <h4>Additional Resources</h4>
               <ul>
-                <li><strong>State Child Support:</strong> <a href="https://jfs.ohio.gov/Ocs" target="_blank" rel="noopener noreferrer">jfs.ohio.gov/Ocs</a></li>
-                <li><strong>Customer Service Web Portal:</strong> <a href="https://jfs.ohio.gov/Ocs/CustServWebPortalWelcome2.stm" target="_blank" rel="noopener noreferrer">jfs.ohio.gov/Ocs/CustServWebPortalWelcome2.stm</a></li>
-                <li><strong>Video Guide:</strong> <a href="https://www.youtube.com/watch?v=V8Og8DE-Pzw" target="_blank" rel="noopener noreferrer">Receiving Child Support in Ohio</a></li>
+                <li><strong>State Child Support:</strong> <a href="https://jfs.ohio.gov/Ocs" target="_blank" rel="noopener noreferrer">jfs.ohio.gov/Ocs<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><strong>Customer Service Web Portal:</strong> <a href="https://jfs.ohio.gov/Ocs/CustServWebPortalWelcome2.stm" target="_blank" rel="noopener noreferrer">jfs.ohio.gov/Ocs/CustServWebPortalWelcome2.stm<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><strong>Video Guide:</strong> <a href="https://www.youtube.com/watch?v=V8Og8DE-Pzw" target="_blank" rel="noopener noreferrer">Receiving Child Support in Ohio<span class="sr-only"> (opens in new tab)</span></a></li>
               </ul>
 
               <h4>Submit Documents</h4>
@@ -313,7 +314,7 @@
                 <li><strong>Heather Prater</strong> - Legal Specialist<br><a href="mailto:heather.prater@jfs.ohio.gov">heather.prater@jfs.ohio.gov</a></li>
               </ul>
 
-              <a href="/child-support" class="usa-button">Learn More</a>
+              <a href="/child-support" class="usa-button" aria-label="Learn more about Child Support Services">Learn More</a>
             </div>
           </li>
           <li>
@@ -324,7 +325,7 @@
               <h3>Public Assistance Services</h3>
 
               <h4>To Apply for SNAP, OWF and/or Medicaid</h4>
-              <p><strong>Online Application:</strong> <a href="https://benefits.ohio.gov" target="_blank" rel="noopener noreferrer">www.benefits.ohio.gov</a></p>
+              <p><strong>Online Application:</strong> <a href="https://benefits.ohio.gov" target="_blank" rel="noopener noreferrer">www.benefits.ohio.gov<span class="sr-only"> (opens in new tab)</span></a></p>
               <p>Application is submitted online. Interviews or further contact will be by telephone and/or mail.</p>
 
               <h4>To Apply for Medicaid</h4>
@@ -362,13 +363,13 @@
 
               <h4>Healthcare & Benefits Programs</h4>
               <ul>
-                <li><a href="https://www.eppicard.com" target="_blank" rel="noopener noreferrer">ADC EPPICare - Access Your Deposit</a></li>
-                <li><a href="http://www.jfs.ohio.gov/ofam/foodstamps.stm" target="_blank" rel="noopener noreferrer">One Direction Card - Access Your Benefits</a></li>
-                <li><a href="https://www.development.ohio.gov/is/is_heap.htm" target="_blank" rel="noopener noreferrer">H.E.A.P. - Home Energy Assistance Program</a></li>
-                <li><a href="http://www.paramounthealthcare.com" target="_blank" rel="noopener noreferrer">Paramount Managed Care</a></li>
-                <li><a href="https://www.buckeyehealthplan.com" target="_blank" rel="noopener noreferrer">Buckeye Managed Care</a></li>
-                <li><a href="http://medicaid.ohio.gov" target="_blank" rel="noopener noreferrer">Ohio Health Plans - Department of Medicaid</a></li>
-                <li><a href="https://unemploymenthelp.ohio.gov" target="_blank" rel="noopener noreferrer">Ohio Unemployment Services</a></li>
+                <li><a href="https://www.eppicard.com" target="_blank" rel="noopener noreferrer">ADC EPPICare - Access Your Deposit<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><a href="http://www.jfs.ohio.gov/ofam/foodstamps.stm" target="_blank" rel="noopener noreferrer">One Direction Card - Access Your Benefits<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><a href="https://www.development.ohio.gov/is/is_heap.htm" target="_blank" rel="noopener noreferrer">H.E.A.P. - Home Energy Assistance Program<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><a href="http://www.paramounthealthcare.com" target="_blank" rel="noopener noreferrer">Paramount Managed Care<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><a href="https://www.buckeyehealthplan.com" target="_blank" rel="noopener noreferrer">Buckeye Managed Care<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><a href="http://medicaid.ohio.gov" target="_blank" rel="noopener noreferrer">Ohio Health Plans - Department of Medicaid<span class="sr-only"> (opens in new tab)</span></a></li>
+                <li><a href="https://unemploymenthelp.ohio.gov" target="_blank" rel="noopener noreferrer">Ohio Unemployment Services<span class="sr-only"> (opens in new tab)</span></a></li>
               </ul>
 
               <h4>Report Fraud or Overpayment Issues</h4>
@@ -379,7 +380,7 @@
               <p><strong>Greta Arnett</strong> - Public Assistance Administrator<br>
               <a href="mailto:greta.triplett-arnett@jfs.ohio.gov">greta.triplett-arnett@jfs.ohio.gov</a></p>
 
-              <a href="/public-assistance" class="usa-button">Learn More</a>
+              <a href="/public-assistance" class="usa-button" aria-label="Learn more about Public Assistance">Learn More</a>
             </div>
           </li>
           <li>
@@ -424,7 +425,7 @@
               <h4>Key Staff</h4>
               <p><strong>Seth Bowersock</strong> - Children Services Administrator</p>
 
-              <a href="/children-services" class="usa-button">Learn More</a>
+              <a href="/children-services" class="usa-button" aria-label="Learn more about Children Services">Learn More</a>
             </div>
           </li>
         </ul>
@@ -567,54 +568,57 @@
             <h2 class="section-heading">Latest Updates</h2>
 
             <article class="news-article">
-              <div class="news-article__image">
+              <div class="news-article__image" aria-hidden="true">
                 <i class="fas fa-file-alt" aria-hidden="true"></i>
               </div>
               <div class="news-article__content">
-                <h4 class="news-article__title">
+                <h3 class="news-article__title">
                   <a href="/news/group-home-supervisor-manager">Group Home Supervisor/Manager</a>
-                </h4>
+                </h3>
                 <time class="news-article__date" datetime="2025-10-07">October 7, 2025</time>
               </div>
             </article>
 
             <article class="news-article">
-              <div class="news-article__image">
+              <div class="news-article__image" aria-hidden="true">
                 <i class="fas fa-file-alt" aria-hidden="true"></i>
               </div>
               <div class="news-article__content">
-                <h4 class="news-article__title">
+                <h3 class="news-article__title">
                   <a href="/news/fiscal-account-clerk-2">Job Posting: Auglaize County Department of Job and Family Services Fiscal – Account Clerk 2</a>
-                </h4>
+                </h3>
                 <time class="news-article__date" datetime="2025-10-07">October 7, 2025</time>
               </div>
             </article>
 
             <article class="news-article">
-              <div class="news-article__image">
+              <div class="news-article__image" aria-hidden="true">
                 <i class="fas fa-file-alt" aria-hidden="true"></i>
               </div>
               <div class="news-article__content">
-                <h4 class="news-article__title">
+                <h3 class="news-article__title">
                   <a href="/news/im-aide-public-assistance">Job Posting: Auglaize County Department of Job and Family Services IM Aide – Public Assistance Division</a>
-                </h4>
+                </h3>
                 <time class="news-article__date" datetime="2025-10-06">October 6, 2025</time>
               </div>
             </article>
 
             <article class="news-article">
-              <div class="news-article__image">
+              <div class="news-article__image" aria-hidden="true">
                 <i class="fas fa-file-alt" aria-hidden="true"></i>
               </div>
               <div class="news-article__content">
-                <h4 class="news-article__title">
+                <h3 class="news-article__title">
                   <a href="/news/social-services-worker">Job Posting: Auglaize County Department of Job and Family Services Social Services Worker 2/3</a>
-                </h4>
+                </h3>
                 <time class="news-article__date" datetime="2025-09-30">September 30, 2025</time>
               </div>
             </article>
 
-            <a href="/news" class="news-articles__view-all">View All News <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="/news" class="news-articles__view-all">
+              <span>View All News</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
 
           <!-- Contact Us Column -->
@@ -623,7 +627,7 @@
             <div class="contact-cards-grid">
               <!-- Director Card -->
               <div class="contact-card">
-                <div class="contact-card__icon">
+                <div class="contact-card__icon" aria-hidden="true">
                   <i class="fas fa-user-tie" aria-hidden="true"></i>
                 </div>
                 <div class="contact-card__content">
@@ -636,7 +640,7 @@
 
               <!-- Hours Card -->
               <div class="contact-card">
-                <div class="contact-card__icon">
+                <div class="contact-card__icon" aria-hidden="true">
                   <i class="far fa-clock" aria-hidden="true"></i>
                 </div>
                 <div class="contact-card__content">
@@ -649,7 +653,7 @@
 
               <!-- Address Card -->
               <div class="contact-card">
-                <div class="contact-card__icon">
+                <div class="contact-card__icon" aria-hidden="true">
                   <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
                 <div class="contact-card__content">
@@ -663,7 +667,7 @@
 
               <!-- Phone Card -->
               <div class="contact-card">
-                <div class="contact-card__icon">
+                <div class="contact-card__icon" aria-hidden="true">
                   <i class="fas fa-phone" aria-hidden="true"></i>
                 </div>
                 <div class="contact-card__content">
@@ -676,7 +680,7 @@
 
               <!-- Email Card -->
               <div class="contact-card">
-                <div class="contact-card__icon">
+                <div class="contact-card__icon" aria-hidden="true">
                   <i class="fas fa-envelope" aria-hidden="true"></i>
                 </div>
                 <div class="contact-card__content">
@@ -695,7 +699,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" aria-label="Footer">
+  <footer class="site-footer">
     <div class="site-footer__main">
       <div class="grid-container">
         <div class="site-footer__grid">
@@ -704,7 +708,7 @@
               <img src="logo-white.png" alt="Auglaize County Department of Job & Family Services" class="footer-logo">
             </a>
             <p>We provide Auglaize County residents with supportive services for public assistance, child and adult protection, and workforce development.</p>
-            <div class="site-footer__social" aria-label="Follow Auglaize County DJFS">
+            <nav class="site-footer__social" aria-label="Social media">
               <a href="https://www.facebook.com/" class="site-footer__social-link" aria-label="Facebook">
                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
               </a>
@@ -714,7 +718,7 @@
               <a href="https://www.youtube.com/" class="site-footer__social-link" aria-label="YouTube">
                 <i class="fab fa-youtube" aria-hidden="true"></i>
               </a>
-            </div>
+            </nav>
           </div>
 
           <nav class="site-footer__column" aria-label="About DJFS">

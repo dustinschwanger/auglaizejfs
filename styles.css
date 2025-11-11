@@ -8,15 +8,15 @@
   --county-blue-dark: #0a1d2f;
   --county-blue: #143452;
   --county-blue-light: #1f4f78;
-  --county-gold: #d4af37;
-  --county-gold-dark: #b48a1f;
+  --county-gold: #c49f30;
+  --county-gold-dark: #a68717;
 
   /* USWDS Color overrides for branding */
   --usa-primary: #0a1d2f;
   --usa-primary-dark: #071320;
   --usa-primary-darker: #050d18;
-  --usa-accent-warm: #d4af37;
-  --usa-accent-warm-dark: #b48a1f;
+  --usa-accent-warm: #c49f30;
+  --usa-accent-warm-dark: #a68717;
 }
 
 /* ========================================
@@ -82,6 +82,12 @@
   border: none;
   padding: 0.5rem;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-header__mobile-toggle span {
@@ -90,6 +96,10 @@
   background-color: var(--county-blue-dark);
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.site-header__mobile-toggle:focus span {
+  background-color: var(--county-gold-dark);
 }
 
 /* Navigation */
@@ -243,7 +253,7 @@
 }
 
 .usa-hero__heading--alt {
-  color: var(--county-gold);
+  color: var(--county-blue-dark);
   font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -251,10 +261,10 @@
   margin-bottom: 1rem;
   display: inline-block;
   padding: 0.5rem 1.25rem;
-  background-color: rgba(212, 175, 55, 0.25);
-  border-left: 4px solid var(--county-gold);
+  background-color: var(--county-gold);
+  border-left: 4px solid var(--county-gold-dark);
   border-radius: 0 0.25rem 0.25rem 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .usa-hero__heading {
@@ -267,7 +277,7 @@
 }
 
 .hero-description {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 1);
   font-size: 1.1875rem;
   line-height: 1.7;
   margin-bottom: 2.5rem;
@@ -324,6 +334,11 @@
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
+.hero-actions .usa-button:first-child:focus {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
 .hero-actions .usa-button--outline {
   border: 2px solid rgba(255, 255, 255, 0.9);
   color: white;
@@ -337,6 +352,11 @@
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.hero-actions .usa-button--outline:focus {
+  outline: 3px solid var(--county-gold);
+  outline-offset: 3px;
 }
 
 .hero-actions .usa-icon,
@@ -412,7 +432,7 @@
 }
 
 .chat-widget__subtitle {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
   font-size: 0.8125rem;
   margin: 0;
   line-height: 1.2;
@@ -444,7 +464,7 @@
 }
 
 .chat-widget__status-text {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
   font-size: 0.8125rem;
   font-weight: 500;
 }
@@ -579,7 +599,7 @@
 
 .chat-message__time {
   font-size: 0.6875rem;
-  color: #71767a;
+  color: #5a5e62;
   padding: 0 0.5rem;
 }
 
@@ -656,7 +676,7 @@
 }
 
 .chat-widget__input-field::placeholder {
-  color: #9ca3af;
+  color: #6b7280;
 }
 
 .chat-widget__send-button {
@@ -836,6 +856,11 @@
   border-color: var(--county-blue-dark);
 }
 
+.quick-access-list .usa-accordion__button:focus {
+  outline: 3px solid var(--county-gold);
+  outline-offset: 2px;
+}
+
 .quick-access-list .usa-accordion__content {
   padding: 2rem 3rem;
 }
@@ -894,7 +919,7 @@
 
 .section-description {
   font-size: 1.125rem;
-  color: #565c65;
+  color: #3d4349;
   text-align: center;
   margin-bottom: 3.5rem;
   margin-top: 2rem;
@@ -1046,6 +1071,16 @@
   background-color: var(--county-blue);
   border-color: var(--county-blue);
   color: #ffffff;
+}
+
+.support-card__cta:focus {
+  outline: 3px solid var(--county-gold);
+  outline-offset: 2px;
+}
+
+.support-card--image:focus-within {
+  outline: 3px solid var(--county-gold);
+  outline-offset: 2px;
 }
 
 @media (max-width: 1200px) {
@@ -1476,6 +1511,11 @@
   line-height: 1.4;
 }
 
+/* Override default h3 styling for news article titles */
+.news-article__content h3.news-article__title {
+  font-size: 1.125rem;
+}
+
 .news-article__title a {
   color: var(--county-blue-dark);
   text-decoration: none;
@@ -1488,7 +1528,7 @@
 
 .news-article__date {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #5b6270;
   font-weight: 500;
 }
 
@@ -1667,7 +1707,7 @@
 }
 
 .site-footer a {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 1);
   text-decoration: none;
 }
 
@@ -1833,6 +1873,9 @@
 
 .site-footer__list a {
   text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 0;
+  min-height: 24px;
 }
 
 .site-footer__contact-list li {
@@ -1883,9 +1926,25 @@
 /* Accessibility: Focus States */
 a:focus,
 button:focus,
-.usa-button:focus {
-  outline: 0.25rem solid var(--county-gold);
-  outline-offset: 0.25rem;
+.usa-button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0.1875rem solid var(--county-gold);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.25rem rgba(196, 159, 48, 0.3);
+}
+
+/* Enhanced focus-visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+.usa-button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 0.1875rem solid var(--county-gold);
+  outline-offset: 0.125rem;
+  box-shadow: 0 0 0 0.25rem rgba(196, 159, 48, 0.3);
 }
 
 /* Mobile Menu Styles */
@@ -2302,7 +2361,7 @@ a:not(.usa-button):hover {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 3rem;
-  color: #5a5a5a;
+  color: #4a4a4a;
   line-height: 1.6;
 }
 
